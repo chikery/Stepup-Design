@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StepUp — 대시보드</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #F5F6F8; }
+  a { text-decoration: none; color: inherit; }
+  ::selection { background: #5A5BD6; color: #fff; }
+</style>
+</head>
+<body>
+<div style="font-family:'Pretendard',sans-serif; background:#F5F6F8; color:#1F2436; min-height:100vh;">
+
+  <!-- TOP NAV -->
+  <nav style="background:#fff; border-bottom:1px solid #E8EAEE;">
+    <div style="max-width:1240px; margin:0 auto; height:64px; padding:0 28px; display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:center; gap:40px;">
+        <span style="font-weight:800; font-size:21px; color:#2F3E72; letter-spacing:-0.01em;">StepUp</span>
+        <div style="display:flex; align-items:center; gap:26px; font-size:14.5px; font-weight:600; color:#8B92A0;">
+          <a href="dashboard.html" style="color:#2F3E72; border-bottom:2px solid #2F3E72; padding-bottom:21px;">대시보드</a>
+          <a href="workshop.html">나의 여정</a>
+          <a href="workshop.html">지원사업</a>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <span style="display:inline-flex; align-items:center; gap:7px; background:#ECECFB; color:#5A5BD6; font-weight:700; font-size:13px; padding:6px 12px; border-radius:100px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M4 14h3v6H4zM10.5 9h3v11h-3zM17 4h3v16h-3z" fill="#5A5BD6"/></svg>3/7</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0" stroke="#9198A6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3.2" stroke="#9198A6" stroke-width="1.8"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1M18.7 18.7l-2.1-2.1M7.4 7.4L5.3 5.3" stroke="#9198A6" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span style="width:32px; height:32px; border-radius:50%; background:linear-gradient(135deg,#8E9BD6,#5A5BD6); display:inline-block; border:1px solid #E8EAEE;"></span>
+      </div>
+    </div>
+  </nav>
+
+  <div style="max-width:1240px; margin:0 auto; padding:28px; display:grid; grid-template-columns:262px 1fr; gap:24px; align-items:start;">
+
+    <!-- SIDEBAR -->
+    <aside style="background:#fff; border:1px solid #E8EAEE; border-radius:18px; padding:22px 18px;">
+      <div style="display:flex; align-items:center; gap:12px; padding:6px 6px 16px;">
+        <span style="width:40px; height:40px; border-radius:11px; background:#5A5BD6; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M5 19c-1.5 1.5-2 4-2 4s2.5-.5 4-2M14.5 4.5C17 2 21 2 21 2s0 4-2.5 6.5L12 15l-3-3 5.5-7.5zM9 12l-3 3M12 15l-3 3" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><div style="font-size:15px; font-weight:800;">창업 로드맵</div>
+          <div style="display:flex; align-items:center; gap:7px; margin-top:3px;"><span style="font-size:12.5px; font-weight:700; color:#5A5BD6;">32%</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M4 14h3v6H4zM10.5 9h3v11h-3zM17 4h3v16h-3z" fill="#5A5BD6"/></svg></div></div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:2px;">
+        <div style="display:flex; align-items:center; gap:11px; padding:10px 11px; border-radius:10px; font-size:13.5px; font-weight:600; color:#6B7280;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 00-4 12.7V17a2 2 0 002 2h4a2 2 0 002-2v-2.3A7 7 0 0012 2zM9 22h6" stroke="#9198A6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>아이디어 스파크</div>
+        <div style="display:flex; align-items:center; gap:11px; padding:10px 11px; border-radius:10px; font-size:13.5px; font-weight:600; color:#6B7280;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="13.5" cy="6.5" r="2.5" stroke="#9198A6" stroke-width="1.7"/><circle cx="6.5" cy="11.5" r="2" stroke="#9198A6" stroke-width="1.7"/><circle cx="15" cy="15" r="2" stroke="#9198A6" stroke-width="1.7"/><path d="M5 19c2-3 9-4 12-1" stroke="#9198A6" stroke-width="1.7" stroke-linecap="round"/></svg>비전과 예술성</div>
+        <div style="display:flex; align-items:center; gap:11px; padding:10px 11px; border-radius:10px; font-size:13.5px; font-weight:600; color:#6B7280;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M8 19a5 5 0 100-10 5 5 0 000 10zM3 5h6M6 3v4M16 21l5-5M14 14h6v6" stroke="#9198A6" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>시장성 검증</div>
+        <div style="display:flex; align-items:center; gap:11px; padding:10px 11px; border-radius:10px; background:#ECECFB; font-size:13.5px; font-weight:700; color:#5A5BD6;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="20" height="13" rx="2.5" stroke="#5A5BD6" stroke-width="1.7"/><circle cx="12" cy="12.5" r="2.5" stroke="#5A5BD6" stroke-width="1.7"/></svg>수익 모델</div>
+        <div style="display:flex; align-items:center; gap:11px; padding:10px 11px; border-radius:10px; font-size:13.5px; font-weight:600; color:#6B7280;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#9198A6" stroke-width="1.7"/><path d="M21 21l-4-4" stroke="#9198A6" stroke-width="1.7" stroke-linecap="round"/></svg>지원사업 매칭</div>
+        <div style="display:flex; align-items:center; gap:11px; padding:10px 11px; border-radius:10px; font-size:13.5px; font-weight:600; color:#6B7280;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="#9198A6" stroke-width="1.7"/><circle cx="17" cy="9" r="2.3" stroke="#9198A6" stroke-width="1.7"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5M15.5 19c0-2 1-3.4 3-3.7" stroke="#9198A6" stroke-width="1.7" stroke-linecap="round"/></svg>팀 빌딩</div>
+        <div style="display:flex; align-items:center; gap:11px; padding:10px 11px; border-radius:10px; font-size:13.5px; font-weight:600; color:#6B7280;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 19c-1.5 1.5-2 4-2 4s2.5-.5 4-2M14.5 4.5C17 2 21 2 21 2s0 4-2.5 6.5L12 15l-3-3 5.5-7.5z" stroke="#9198A6" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>서비스 런칭</div>
+      </div>
+      <div style="border-top:1px solid #EEF0F3; margin:16px 0; "></div>
+      <button onclick="window.__insight&&window.__insight()" style="width:100%; cursor:pointer; font-family:inherit; display:inline-flex; align-items:center; justify-content:center; gap:8px; background:#5A5BD6; color:#fff; border:none; padding:12px; border-radius:11px; font-size:14px; font-weight:700;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3zM19 14l.9 2.1L22 17l-2.1.9L19 20l-.9-2.1L16 17l2.1-.9L19 14z" fill="#fff"/></svg>AI 인사이트 받기</button>
+      <div style="display:flex; align-items:center; gap:9px; padding:14px 11px 4px; font-size:13px; color:#9198A6;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.2" stroke="#9198A6" stroke-width="1.7"/><path d="M9.5 9.5a2.5 2.5 0 113.5 2.3c-.7.3-1 .8-1 1.7M12 17h.01" stroke="#9198A6" stroke-width="1.7" stroke-linecap="round"/></svg>고객센터</div>
+    </aside>
+
+    <!-- MAIN -->
+    <main style="display:flex; flex-direction:column; gap:22px;">
+
+      <!-- status -->
+      <div style="background:#fff; border:1px solid #E8EAEE; border-radius:18px; padding:26px 28px;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:24px;">
+          <div>
+            <h1 style="font-size:24px; font-weight:800; color:#2F3E72; margin:0;">지금 너의 상태</h1>
+            <p style="font-size:15px; color:#6B7280; margin:9px 0 0;">오후에도 힘내세요! 성공적인 창업을 향한 다음 단계가 기다리고 있습니다.</p>
+          </div>
+          <div style="display:flex; gap:26px; flex-shrink:0; text-align:right;">
+            <div><div style="font-size:12px; color:#9198A6; font-weight:600;">현재 단계</div><div style="font-size:22px; font-weight:800; color:#2F3E72; margin-top:3px;">4/7</div></div>
+            <div style="border-left:1px solid #EEF0F3; padding-left:26px;"><div style="font-size:12px; color:#9198A6; font-weight:600;">매칭된 지원사업</div><div style="font-size:22px; font-weight:800; color:#15A06B; margin-top:3px; display:flex; align-items:center; gap:6px; justify-content:flex-end;">2<svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 14h3v6H4zM10.5 9h3v11h-3zM17 4h3v16h-3z" fill="#15A06B"/></svg></div></div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-top:22px; margin-bottom:8px;"><span style="font-size:13px; color:#6B7280; font-weight:600;">전체 달성도</span><span style="font-size:13px; color:#5A5BD6; font-weight:800;">57%</span></div>
+        <div style="height:9px; background:#EEF0F3; border-radius:100px; overflow:hidden;"><div style="width:57%; height:100%; background:#2F3E72; border-radius:100px;"></div></div>
+      </div>
+
+      <!-- next task + milestone -->
+      <div style="display:grid; grid-template-columns:1.55fr 1fr; gap:22px; align-items:stretch;">
+        <div style="background:#fff; border:1px solid #E8EAEE; border-radius:18px; padding:26px 28px; display:flex; flex-direction:column;">
+          <div style="display:flex; align-items:center; gap:10px;"><span style="background:#ECECFB; color:#5A5BD6; font-size:12px; font-weight:800; padding:4px 10px; border-radius:7px;">STEP 4</span><span style="font-size:13px; color:#9198A6; font-weight:600;">다음 과제</span></div>
+          <h2 style="font-size:23px; font-weight:800; margin:14px 0 0; color:#1F2436;">MVP 테스트 결과 입력</h2>
+          <p style="font-size:14.5px; line-height:1.65; color:#6B7280; margin:12px 0 0;">최소 기능 제품(MVP)에 대한 시장 반응을 기록할 차례입니다. 고객 피드백 데이터를 입력하면 AI가 비즈니스 모델 수정 방안을 제안해 드립니다. 린 스타트업의 핵심은 빠른 측정과 학습입니다.</p>
+          <div style="background:#fff; border:1px solid #D7DBF5; border-radius:13px; padding:15px 16px; margin:20px 0 0; display:flex; gap:13px;">
+            <span style="display:inline-flex; align-items:center; gap:5px; flex-shrink:0; color:#5A5BD6; font-weight:800; font-size:14px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3c-1 3-2 4-5 5 3 1 4 2 5 5 1-3 2-4 5-5-3-1-4-2-5-5z" fill="#15A06B"/></svg>RK</span>
+            <div><div style="font-size:11.5px; color:#9198A6; font-weight:700; margin-bottom:4px;">AI 코치 요다</div><div style="font-size:13.5px; line-height:1.6; color:#4A5568;">“0에서 1을 만드는 과정에서 완벽함보다 중요한 건 시장의 목소리예요. 지난달 설문조사 결과를 함께 업로드하시면 훨씬 정교한 TPCS 프레임워크 분석이 가능해요!”</div></div>
+          </div>
+          <a href="step-detail.html" style="display:inline-flex; align-items:center; justify-content:center; gap:9px; background:#2F3E72; color:#fff; padding:15px; border-radius:12px; font-size:15px; font-weight:700; margin-top:20px;">작업 시작하기
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+
+        <div style="background:#EDEFF3; border:1px solid #E4E7ED; border-radius:18px; padding:26px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; position:relative; overflow:hidden;">
+          <div style="position:absolute; top:30px; right:30px; width:120px; height:90px; background:#E2E5EC; border-radius:14px; transform:rotate(8deg);"></div>
+          <div style="position:absolute; top:42px; right:42px; width:120px; height:90px; background:#D9DDE6; border-radius:14px; transform:rotate(-6deg);"></div>
+          <span style="position:relative; z-index:2; width:62px; height:62px; border-radius:50%; background:#fff; box-shadow:0 8px 20px -8px rgba(47,62,114,0.3); display:inline-flex; align-items:center; justify-content:center;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 21V4M5 4c3-1.5 6 1.5 9 0s5-1 5-1v9s-2-.5-5 1-6-1.5-9 0" stroke="#2F3E72" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div style="position:relative; z-index:2; font-size:16px; font-weight:800; margin-top:16px; color:#2F3E72;">다음 마일스톤</div>
+          <div style="position:relative; z-index:2; font-size:13.5px; color:#7E869A; margin-top:5px;">시드 펀딩 지원 자격 획득</div>
+        </div>
+      </div>
+
+      <!-- recommended grants -->
+      <div>
+        <div style="display:flex; align-items:center; justify-content:space-between; margin:6px 2px 16px;">
+          <h2 style="font-size:20px; font-weight:800; margin:0;">추천 지원사업</h2>
+          <a href="workshop.html" style="display:inline-flex; align-items:center; gap:5px; font-size:13.5px; font-weight:700; color:#5A5BD6;">전체보기 <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="#5A5BD6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+          <div style="background:#fff; border:1px solid #E8EAEE; border-radius:16px; padding:20px 22px; display:flex; gap:16px; align-items:center;">
+            <span style="width:48px; height:48px; border-radius:12px; background:#E7F5EE; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V10M19 21V10M3 10l9-6 9 6M9 21v-6h6v6" stroke="#15A06B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div style="flex:1;"><div style="margin-bottom:6px;"><span style="display:inline-flex; align-items:center; gap:5px; background:#E7F5EE; color:#15A06B; font-size:11.5px; font-weight:800; padding:3px 9px; border-radius:6px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M4 14h3v6H4zM10.5 9h3v11h-3zM17 4h3v16h-3z" fill="#15A06B"/></svg>D-14</span></div>
+              <div style="font-size:15.5px; font-weight:700;">기술보증기금 창업지원</div><div style="font-size:13px; color:#9198A6; margin-top:3px;">최대 1억 원 보증 지원</div></div>
+          </div>
+          <div style="background:#fff; border:1px solid #E8EAEE; border-radius:16px; padding:20px 22px; display:flex; gap:16px; align-items:center;">
+            <span style="width:48px; height:48px; border-radius:12px; background:#ECECFB; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="5" r="2.3" stroke="#5A5BD6" stroke-width="1.7"/><circle cx="5" cy="17" r="2.3" stroke="#5A5BD6" stroke-width="1.7"/><circle cx="19" cy="17" r="2.3" stroke="#5A5BD6" stroke-width="1.7"/><path d="M10.5 6.8L6.5 15M13.5 6.8L17.5 15M7 17h10" stroke="#5A5BD6" stroke-width="1.7"/></svg></span>
+            <div style="flex:1;"><div style="margin-bottom:6px;"><span style="display:inline-flex; align-items:center; gap:5px; background:#FBE9E9; color:#DC4444; font-size:11.5px; font-weight:800; padding:3px 9px; border-radius:6px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M4 14h3v6H4zM10.5 9h3v11h-3zM17 4h3v16h-3z" fill="#DC4444"/></svg>D-3</span></div>
+              <div style="font-size:15.5px; font-weight:700;">청년창업사관학교 14기</div><div style="font-size:13px; color:#9198A6; margin-top:3px;">사업화 자금 및 교육 지원</div></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StepUp — AI 창업 로드맵 코치</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #F5F6F8; }
+  ::selection { background: #8E8FF2; color: #2F3E72; }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
+  @keyframes floaty2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(12px); } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+</style>
+</head>
+<body>
+<div style="font-family: 'Pretendard', sans-serif; color: #1F2436; background: #F5F6F8; overflow-x: hidden;">
+
+  <!-- ============ NAV ============ -->
+  <nav style="position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); background: rgba(245,246,248,0.82); border-bottom: 1px solid rgba(47,62,114,0.07);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 16px 40px;">
+      <div style="display: flex; align-items: center; gap: 9px;">
+        <span style="width: 32px; height: 32px; border-radius: 9px; background: #5A5BD6; display: inline-flex; align-items: center; justify-content: center;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21V11M12 11C12 7 9 4 4 4C4 9 8 11 12 11ZM12 11C12 6.5 15 3 21 3.5C20.5 9 16 11 12 11Z" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em;">Stepup</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 36px; font-size: 15px; font-weight: 500; color: #2C3550; white-space: nowrap;">
+        <a href="#how" style="color: inherit; text-decoration: none;">작동 방식</a>
+        <a href="#match" style="color: inherit; text-decoration: none;">지원사업 매칭</a>
+        <a href="#preview" style="color: inherit; text-decoration: none;">작성 화면</a>
+        <a href="#pricing" style="color: inherit; text-decoration: none;">요금</a>
+        <a href="step-detail.html" style="background: #1F2436; color: #F5F6F8; padding: 11px 20px; border-radius: 100px; font-weight: 600; text-decoration: none;">무료로 시작하기</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section style="position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -140px; right: -60px; width: 480px; height: 480px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #C7C8FA, transparent 70%); filter: blur(12px); opacity: 0.75; animation: floaty 9s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: -180px; left: -80px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle at 50% 50%, #DDE2F7, transparent 70%); filter: blur(16px); opacity: 0.55; animation: floaty2 11s ease-in-out infinite;"></div>
+
+    <div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.02fr; gap: 48px; align-items: center; padding: 72px 40px 88px;">
+      <!-- left copy -->
+      <div>
+        <div style="display: inline-flex; align-items: center; gap: 8px; font-family: 'Bricolage Grotesque', sans-serif; font-size: 13.5px; font-weight: 600; letter-spacing: 0.06em; color: #5A5BD6; background: #ECECFB; padding: 8px 15px; border-radius: 100px;">IDEA → PLAN → FUND</div>
+        <h1 style="font-size: 62px; line-height: 1.05; font-weight: 800; letter-spacing: -0.035em; margin: 24px 0 0; text-wrap: balance;">아이디어를<br><span style="color:#5A5BD6;">사업으로</span> 키우는<br>가장 빠른 길.</h1>
+        <p style="font-size: 19px; line-height: 1.6; color: #4A5568; max-width: 520px; margin: 28px 0 0;">창업 아이디어만 있다면 충분해요. AI 코치가 <b style="color:#1F2436;">7단계로 사업계획서</b>를 완성하고, 지금 신청 가능한 <b style="color:#1F2436;">정부지원사업</b>까지 매칭해 드립니다.</p>
+        <div style="display: flex; align-items: center; gap: 13px; margin-top: 36px;">
+          <a href="step-detail.html" style="background: #5A5BD6; color: #fff; padding: 17px 30px; border-radius: 100px; font-size: 17px; font-weight: 600; box-shadow: 0 14px 30px -10px rgba(90,91,214,0.6); text-decoration: none;">무료로 시작하기 →</a>
+          <a href="#preview" style="padding: 17px 28px; border-radius: 100px; font-size: 17px; font-weight: 600; border: 1.5px solid #D5D9E2; color: #2C3550; text-decoration: none;">데모 둘러보기</a>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-top: 40px; font-size: 14px; color: #6B7280;">
+          <span style="display:inline-flex;">
+            <span style="width:26px;height:26px;border-radius:50%;background:#5A5BD6;border:2px solid #F5F6F8;display:inline-block;"></span>
+            <span style="width:26px;height:26px;border-radius:50%;background:#8E8FF2;border:2px solid #F5F6F8;display:inline-block;margin-left:-8px;"></span>
+            <span style="width:26px;height:26px;border-radius:50%;background:#DC4444;border:2px solid #F5F6F8;display:inline-block;margin-left:-8px;"></span>
+          </span>
+          문체부 · 중기부 · 예술경영지원센터 공고 <b style="color:#2C3550;">실시간 반영</b>
+        </div>
+      </div>
+
+      <!-- right mockup -->
+      <div style="position: relative;">
+        <div style="background: #fff; border-radius: 18px; box-shadow: 0 36px 70px -26px rgba(47,62,114,0.42); border: 1px solid rgba(0,0,0,0.06); overflow: hidden;">
+          <div style="display: flex; align-items: center; gap: 8px; padding: 13px 16px; background: #F1F1F6; border-bottom: 1px solid rgba(0,0,0,0.05);">
+            <span style="width: 11px; height: 11px; border-radius: 50%; background: #E5675B;"></span>
+            <span style="width: 11px; height: 11px; border-radius: 50%; background: #F4BE4F;"></span>
+            <span style="width: 11px; height: 11px; border-radius: 50%; background: #61C554;"></span>
+            <span style="flex: 1; text-align: center; font-size: 12px; color: #8B92A0;">app.stepup.kr / write</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 168px 1fr;">
+            <!-- step sidebar -->
+            <div style="background: #2F3E72; padding: 18px 13px; color: #C2CAE2;">
+              <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em; color: #7E86A8; margin-bottom: 12px;">ROADMAP</div>
+              <div style="display:flex;align-items:center;gap:9px;padding:7px 8px;border-radius:8px;margin-bottom:3px;"><span style="width:19px;height:19px;border-radius:50%;background:rgba(142,143,242,0.28);color:#C2CAE2;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">✓</span><span style="font-size:12px;color:#9AA3C0;white-space:nowrap;">문제 발견</span></div>
+              <div style="display:flex;align-items:center;gap:9px;padding:7px 8px;border-radius:8px;margin-bottom:3px;"><span style="width:19px;height:19px;border-radius:50%;background:rgba(142,143,242,0.28);color:#C2CAE2;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">✓</span><span style="font-size:12px;color:#9AA3C0;white-space:nowrap;">시장·고객 리서치</span></div>
+              <div style="display:flex;align-items:center;gap:9px;padding:7px 8px;border-radius:8px;margin-bottom:3px;background:rgba(142,143,242,0.14);"><span style="width:19px;height:19px;border-radius:50%;background:#8E8FF2;color:#2F3E72;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">3</span><span style="font-size:12px;font-weight:700;color:#EAEDF6;white-space:nowrap;">솔루션 &amp; MVP</span></div>
+              <div style="display:flex;align-items:center;gap:9px;padding:7px 8px;border-radius:8px;margin-bottom:3px;"><span style="width:19px;height:19px;border-radius:50%;background:rgba(255,255,255,0.1);color:#6E7699;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">4</span><span style="font-size:12px;color:#6E7699;white-space:nowrap;">비즈니스 모델</span></div>
+              <div style="display:flex;align-items:center;gap:9px;padding:7px 8px;border-radius:8px;margin-bottom:3px;"><span style="width:19px;height:19px;border-radius:50%;background:rgba(255,255,255,0.1);color:#6E7699;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">5</span><span style="font-size:12px;color:#6E7699;white-space:nowrap;">실행 로드맵</span></div>
+              <div style="display:flex;align-items:center;gap:9px;padding:7px 8px;border-radius:8px;margin-bottom:3px;"><span style="width:19px;height:19px;border-radius:50%;background:rgba(255,255,255,0.1);color:#6E7699;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">6</span><span style="font-size:12px;color:#6E7699;white-space:nowrap;">재무 계획</span></div>
+              <div style="display:flex;align-items:center;gap:9px;padding:7px 8px;border-radius:8px;"><span style="width:19px;height:19px;border-radius:50%;background:rgba(255,255,255,0.1);color:#6E7699;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">7</span><span style="font-size:12px;color:#6E7699;white-space:nowrap;">피치덱 완성</span></div>
+            </div>
+            <!-- writing area -->
+            <div style="padding: 22px 22px 24px; position: relative; min-height: 380px;">
+              <div style="font-size: 12px; color: #5A5BD6; font-weight: 700; letter-spacing: 0.04em;">STEP 3 · 솔루션 &amp; MVP 설계</div>
+              <div style="font-size: 18px; font-weight: 700; margin: 6px 0 14px; color: #1F2436; letter-spacing: -0.01em;">핵심 솔루션을 한 문장으로 정의해 볼까요?</div>
+              <div style="background: #F4F5FA; border: 1px solid #E6E9F0; border-radius: 12px; padding: 14px 15px; font-size: 13.5px; line-height: 1.7; color: #3C4660;">
+                <span style="display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:700; color:#5A5BD6; background:#ECECFB; padding:4px 9px; border-radius:100px; margin-bottom:9px;">✦ AI 초안</span><br>
+                지역 예술가의 작품을 <b>구독형 큐레이션</b>으로 큐레이터가 매달 엄선해 배송하고, 구매 전 실물을 집에서 체험하게 하여 <b>온라인 구매 거부감</b>이라는 문제를 해소합니다.
+              </div>
+              <div style="display: flex; gap: 8px; margin-top: 12px;">
+                <span style="font-size: 12.5px; font-weight: 600; color: #fff; background: #5A5BD6; padding: 9px 15px; border-radius: 9px;">이대로 저장</span>
+                <span style="font-size: 12.5px; font-weight: 600; color: #2C3550; border: 1px solid #D5D9E2; padding: 9px 15px; border-radius: 9px;">↻ 다시 생성</span>
+                <span style="font-size: 12.5px; font-weight: 600; color: #2C3550; border: 1px solid #D5D9E2; padding: 9px 15px; border-radius: 9px;">직접 수정</span>
+              </div>
+              <!-- matched grant toast -->
+              <div style="position: absolute; right: 18px; bottom: 18px; width: 232px; background: #fff; border: 1px solid #E6E9F0; border-radius: 13px; box-shadow: 0 18px 34px -14px rgba(47,62,114,0.32); padding: 14px 15px; animation: floaty 7s ease-in-out infinite;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="font-size: 10.5px; font-weight: 700; color: #6B7280; letter-spacing: 0.04em;">🎯 추천 지원사업</span>
+                  <span style="font-size: 10.5px; font-weight: 700; color: #5A5BD6; background: #ECECFB; padding: 3px 8px; border-radius: 100px;">매칭 94%</span>
+                </div>
+                <div style="font-size: 13.5px; font-weight: 700; color: #1F2436; line-height: 1.35;">예비창업패키지 2026</div>
+                <div style="font-size: 11.5px; color: #6B7280; margin-top: 3px;">중소벤처기업부 · 최대 1억원</div>
+                <div style="font-size: 11px; color: #DC4444; font-weight: 700; margin-top: 8px;">D-12 · 마감 임박</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST MARQUEE ============ -->
+  <section style="border-top: 1px solid rgba(47,62,114,0.07); border-bottom: 1px solid rgba(47,62,114,0.07); background: #FBFBFE; overflow: hidden; padding: 22px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; gap: 18px;">
+      <span style="font-size: 13px; font-weight: 600; color: #8B92A0; white-space: nowrap; flex-shrink: 0;">실시간 반영 공고 기관</span>
+      <div style="flex: 1; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);">
+        <div style="display: flex; gap: 44px; width: max-content; animation: marquee 26s linear infinite; font-family: 'Bricolage Grotesque', sans-serif; font-size: 17px; font-weight: 600; color: #AEB6C2;">
+          <span>중소벤처기업부</span><span>문화체육관광부</span><span>예술경영지원센터</span><span>창업진흥원</span><span>중소기업진흥공단</span><span>한국콘텐츠진흥원</span><span>K-Startup</span>
+          <span>중소벤처기업부</span><span>문화체육관광부</span><span>예술경영지원센터</span><span>창업진흥원</span><span>중소기업진흥공단</span><span>한국콘텐츠진흥원</span><span>K-Startup</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM ============ -->
+  <section style="max-width: 1200px; margin: 0 auto; padding: 104px 40px 60px;">
+    <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.06em; color: #DC4444;">THE PROBLEM</div>
+    <h2 style="font-size: 44px; line-height: 1.15; font-weight: 800; letter-spacing: -0.03em; margin: 14px 0 0; max-width: 720px; text-wrap: balance;">좋은 아이디어는 있는데,<br>사업계획서 앞에서 멈춰 있나요?</h2>
+    <p style="font-size: 18px; line-height: 1.6; color: #5A6273; margin: 18px 0 0; max-width: 600px;">예비 창업자 대부분이 같은 벽에 부딪혀요. Stepup은 이 네 가지를 정확히 풀어줍니다.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 48px;">
+      <div style="background: #fff; border: 1px solid rgba(47,62,114,0.07); border-radius: 18px; padding: 26px 22px;">
+        <div style="font-size: 26px;">🧭</div>
+        <div style="font-size: 17px; font-weight: 700; margin: 14px 0 8px;">어디서부터 써야 할지 막막함</div>
+        <p style="font-size: 14px; line-height: 1.6; color: #6B7280; margin: 0;">빈 문서 앞의 막막함. AI가 첫 질문부터 단계로 끌어줍니다.</p>
+      </div>
+      <div style="background: #fff; border: 1px solid rgba(47,62,114,0.07); border-radius: 18px; padding: 26px 22px;">
+        <div style="font-size: 26px;">📑</div>
+        <div style="font-size: 17px; font-weight: 700; margin: 14px 0 8px;">낯선 양식과 어려운 용어</div>
+        <p style="font-size: 14px; line-height: 1.6; color: #6B7280; margin: 0;">TAM·BM·피치덱… 용어를 몰라도 채워지는 검증된 프레임.</p>
+      </div>
+      <div style="background: #fff; border: 1px solid rgba(47,62,114,0.07); border-radius: 18px; padding: 26px 22px;">
+        <div style="font-size: 26px;">🔍</div>
+        <div style="font-size: 17px; font-weight: 700; margin: 14px 0 8px;">흩어진 지원사업 공고</div>
+        <p style="font-size: 14px; line-height: 1.6; color: #6B7280; margin: 0;">기관마다 흩어진 공고. 내 아이템에 맞는 것만 골라 드려요.</p>
+      </div>
+      <div style="background: #fff; border: 1px solid rgba(47,62,114,0.07); border-radius: 18px; padding: 26px 22px;">
+        <div style="font-size: 26px;">💬</div>
+        <div style="font-size: 17px; font-weight: 700; margin: 14px 0 8px;">피드백 줄 사람이 없음</div>
+        <p style="font-size: 14px; line-height: 1.6; color: #6B7280; margin: 0;">혼자 쓰면 비는 논리. 단계마다 AI가 약점을 짚어줍니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS — 7 STEP ROADMAP ============ -->
+  <section id="how" style="background: #2F3E72; color: #EAEDF6; padding: 104px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; flex-wrap: wrap;">
+        <div>
+          <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.06em; color: #8E8FF2;">HOW IT WORKS</div>
+          <h2 style="font-size: 44px; line-height: 1.15; font-weight: 800; letter-spacing: -0.03em; margin: 14px 0 0;">7단계만 따라오면,<br>사업계획서가 완성됩니다.</h2>
+        </div>
+        <p style="font-size: 17px; line-height: 1.6; color: #AEB6CC; max-width: 360px; margin: 0;">각 단계에서 AI가 질문하고 초안을 씁니다. 단계를 마칠 때마다 그 내용에 맞는 지원사업이 자동으로 매칭돼요.</p>
+      </div>
+
+      <div style="margin-top: 64px; display: flex; flex-direction: column;">
+        <!-- step row template repeated -->
+        <div style="display: grid; grid-template-columns: 64px 1fr; gap: 24px;">
+          <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
+            <span style="width: 52px; height: 52px; border-radius: 50%; background: #8E8FF2; color: #2F3E72; display: inline-flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; position: relative; z-index: 2;">1</span>
+            <span style="position: absolute; left: 31px; top: 26px; bottom: -26px; width: 2px; background: linear-gradient(#8E8FF2, rgba(255,255,255,0.14)); z-index: 0;"></span>
+          </div>
+          <div style="padding-bottom: 28px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;">
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;"><h3 style="font-size: 22px; font-weight: 700; margin: 0; white-space: nowrap;">문제 발견</h3><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;color:#7E86A8;">Problem</span></div>
+              <p style="font-size: 15px; line-height: 1.6; color: #AEB6CC; margin: 8px 0 0; max-width: 560px;">해결할 문제와 진짜 고객이 누구인지 명확히 합니다. 고객 가설과 인터뷰 질문지를 AI가 생성해요.</p>
+            </div>
+            <span style="font-size: 12.5px; font-weight: 600; color: #8E8FF2; border: 1px solid rgba(142,143,242,0.35); padding: 7px 13px; border-radius: 100px; white-space: nowrap;">+ 예비창업패키지</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 64px 1fr; gap: 24px;">
+          <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
+            <span style="width: 52px; height: 52px; border-radius: 50%; background: rgba(142,143,242,0.16); color: #8E8FF2; display: inline-flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; border: 1px solid rgba(142,143,242,0.3); position: relative; z-index: 2;">2</span>
+            <span style="position: absolute; left: 31px; top: 26px; bottom: -26px; width: 2px; background: rgba(255,255,255,0.14); z-index: 0;"></span>
+          </div>
+          <div style="padding-bottom: 28px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;">
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;"><h3 style="font-size: 22px; font-weight: 700; margin: 0; white-space: nowrap;">시장·고객 리서치</h3><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;color:#7E86A8;">Research</span></div>
+              <p style="font-size: 15px; line-height: 1.6; color: #AEB6CC; margin: 8px 0 0; max-width: 560px;">시장 규모(TAM·SAM·SOM)와 경쟁사를 데이터 기반으로 정리합니다. 막연한 추정 대신 근거를 채워요.</p>
+            </div>
+            <span style="font-size: 12.5px; font-weight: 600; color: #8E8FF2; border: 1px solid rgba(142,143,242,0.35); padding: 7px 13px; border-radius: 100px; white-space: nowrap;">+ 청년창업사관학교</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 64px 1fr; gap: 24px;">
+          <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
+            <span style="width: 52px; height: 52px; border-radius: 50%; background: rgba(142,143,242,0.16); color: #8E8FF2; display: inline-flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; border: 1px solid rgba(142,143,242,0.3); position: relative; z-index: 2;">3</span>
+            <span style="position: absolute; left: 31px; top: 26px; bottom: -26px; width: 2px; background: rgba(255,255,255,0.14); z-index: 0;"></span>
+          </div>
+          <div style="padding-bottom: 28px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;">
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;"><h3 style="font-size: 22px; font-weight: 700; margin: 0; white-space: nowrap;">솔루션 &amp; MVP 설계</h3><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;color:#7E86A8;">Solution</span></div>
+              <p style="font-size: 15px; line-height: 1.6; color: #AEB6CC; margin: 8px 0 0; max-width: 560px;">핵심 가치 제안과 최소 기능 제품(MVP)을 정의합니다. 무엇을 먼저 만들지 우선순위를 잡아요.</p>
+            </div>
+            <span style="font-size: 12.5px; font-weight: 600; color: #8E8FF2; border: 1px solid rgba(142,143,242,0.35); padding: 7px 13px; border-radius: 100px; white-space: nowrap;">+ 초기창업패키지</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 64px 1fr; gap: 24px;">
+          <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
+            <span style="width: 52px; height: 52px; border-radius: 50%; background: rgba(142,143,242,0.16); color: #8E8FF2; display: inline-flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; border: 1px solid rgba(142,143,242,0.3); position: relative; z-index: 2;">4</span>
+            <span style="position: absolute; left: 31px; top: 26px; bottom: -26px; width: 2px; background: rgba(255,255,255,0.14); z-index: 0;"></span>
+          </div>
+          <div style="padding-bottom: 28px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;">
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;"><h3 style="font-size: 22px; font-weight: 700; margin: 0; white-space: nowrap;">비즈니스 모델</h3><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;color:#7E86A8;">Business Model</span></div>
+              <p style="font-size: 15px; line-height: 1.6; color: #AEB6CC; margin: 8px 0 0; max-width: 560px;">수익 구조와 가격 전략, 비용 구조를 설계합니다. 어떻게 돈을 버는지 한 장으로 정리돼요.</p>
+            </div>
+            <span style="font-size: 12.5px; font-weight: 600; color: #8E8FF2; border: 1px solid rgba(142,143,242,0.35); padding: 7px 13px; border-radius: 100px; white-space: nowrap;">+ 콘텐츠 스타트업 육성</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 64px 1fr; gap: 24px;">
+          <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
+            <span style="width: 52px; height: 52px; border-radius: 50%; background: rgba(142,143,242,0.16); color: #8E8FF2; display: inline-flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; border: 1px solid rgba(142,143,242,0.3); position: relative; z-index: 2;">5</span>
+            <span style="position: absolute; left: 31px; top: 26px; bottom: -26px; width: 2px; background: rgba(255,255,255,0.14); z-index: 0;"></span>
+          </div>
+          <div style="padding-bottom: 28px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;">
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;"><h3 style="font-size: 22px; font-weight: 700; margin: 0; white-space: nowrap;">실행 로드맵</h3><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;color:#7E86A8;">Execution</span></div>
+              <p style="font-size: 15px; line-height: 1.6; color: #AEB6CC; margin: 8px 0 0; max-width: 560px;">마일스톤과 팀 구성, 일정 계획을 세웁니다. 심사위원이 보고 싶어 하는 실행력을 보여줘요.</p>
+            </div>
+            <span style="font-size: 12.5px; font-weight: 600; color: #8E8FF2; border: 1px solid rgba(142,143,242,0.35); padding: 7px 13px; border-radius: 100px; white-space: nowrap;">+ 창업도약패키지</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 64px 1fr; gap: 24px;">
+          <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
+            <span style="width: 52px; height: 52px; border-radius: 50%; background: rgba(142,143,242,0.16); color: #8E8FF2; display: inline-flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; border: 1px solid rgba(142,143,242,0.3); position: relative; z-index: 2;">6</span>
+            <span style="position: absolute; left: 31px; top: 26px; bottom: -26px; width: 2px; background: rgba(255,255,255,0.14); z-index: 0;"></span>
+          </div>
+          <div style="padding-bottom: 28px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;">
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;"><h3 style="font-size: 22px; font-weight: 700; margin: 0; white-space: nowrap;">재무 계획</h3><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;color:#7E86A8;">Financials</span></div>
+              <p style="font-size: 15px; line-height: 1.6; color: #AEB6CC; margin: 8px 0 0; max-width: 560px;">추정 매출과 자금 소요·조달 계획을 작성합니다. 숫자에 약해도 템플릿이 계산을 도와줘요.</p>
+            </div>
+            <span style="font-size: 12.5px; font-weight: 600; color: #8E8FF2; border: 1px solid rgba(142,143,242,0.35); padding: 7px 13px; border-radius: 100px; white-space: nowrap;">+ 예술인 창업지원</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 64px 1fr; gap: 24px;">
+          <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
+            <span style="width: 52px; height: 52px; border-radius: 50%; background: #DC4444; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; position: relative; z-index: 2;">7</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;">
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;"><h3 style="font-size: 22px; font-weight: 700; margin: 0; white-space: nowrap;">피치덱 완성</h3><span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;color:#7E86A8;">Pitch Deck</span></div>
+              <p style="font-size: 15px; line-height: 1.6; color: #AEB6CC; margin: 8px 0 0; max-width: 560px;">앞선 6단계가 자동으로 통합된 발표자료가 완성됩니다. 예상 Q&amp;A 8문항과 답변 연습까지 제공해요.</p>
+            </div>
+            <span style="font-size: 12.5px; font-weight: 700; color: #fff; background: #DC4444; padding: 7px 13px; border-radius: 100px; white-space: nowrap;">최종 산출물</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MATCHING ============ -->
+  <section id="match" style="max-width: 1200px; margin: 0 auto; padding: 104px 40px;">
+    <div style="display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 56px; align-items: center;">
+      <div>
+        <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.06em; color: #DC4444;">SMART MATCHING</div>
+        <h2 style="font-size: 44px; line-height: 1.15; font-weight: 800; letter-spacing: -0.03em; margin: 14px 0 0; text-wrap: balance;">계획서를 쓰는 동안,<br>지원금이 찾아옵니다.</h2>
+        <p style="font-size: 18px; line-height: 1.65; color: #5A6273; margin: 20px 0 0;">아이템 분야·창업 단계·지역을 입력하면 RAG 엔진이 수백 개 공고를 분석해 <b style="color:#1F2436;">적합도 순으로</b> 추천해요. 작성 중인 계획서 내용이 그대로 신청서 근거가 됩니다.</p>
+        <div style="display: flex; gap: 40px; margin-top: 36px;">
+          <div>
+            <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 38px; font-weight: 800; color: #5A5BD6; line-height: 1;">340<span style="font-size: 22px;">+</span></div>
+            <div style="font-size: 13.5px; color: #6B7280; margin-top: 6px;">실시간 추적 공고</div>
+          </div>
+          <div>
+            <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 38px; font-weight: 800; color: #5A5BD6; line-height: 1;">7<span style="font-size: 22px;">개</span></div>
+            <div style="font-size: 13.5px; color: #6B7280; margin-top: 6px;">연동 정부·기관</div>
+          </div>
+          <div>
+            <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 38px; font-weight: 800; color: #5A5BD6; line-height: 1;">94<span style="font-size: 22px;">%</span></div>
+            <div style="font-size: 13.5px; color: #6B7280; margin-top: 6px;">상위 추천 적합도</div>
+          </div>
+        </div>
+      </div>
+      <!-- match cards -->
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="background: #fff; border: 1px solid rgba(47,62,114,0.08); border-radius: 16px; padding: 20px 22px; display: flex; align-items: center; gap: 18px; box-shadow: 0 18px 36px -28px rgba(47,62,114,0.4);">
+          <div style="width: 52px; height: 52px; border-radius: 12px; background: #ECECFB; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; color: #5A5BD6; font-size: 17px; flex-shrink: 0;">94%</div>
+          <div style="flex: 1;">
+            <div style="font-size: 16.5px; font-weight: 700;">예비창업패키지 2026</div>
+            <div style="font-size: 13px; color: #6B7280; margin-top: 3px;">중소벤처기업부 · 최대 1억원 · 일반형</div>
+          </div>
+          <div style="text-align: right;"><div style="font-size: 13px; font-weight: 700; color: #DC4444;">D-12</div><div style="font-size: 11.5px; color: #9198A6; margin-top: 2px; white-space: nowrap;">마감 임박</div></div>
+        </div>
+        <div style="background: #fff; border: 1px solid rgba(47,62,114,0.08); border-radius: 16px; padding: 20px 22px; display: flex; align-items: center; gap: 18px; box-shadow: 0 18px 36px -28px rgba(47,62,114,0.4);">
+          <div style="width: 52px; height: 52px; border-radius: 12px; background: #ECECFB; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; color: #5A5BD6; font-size: 17px; flex-shrink: 0;">88%</div>
+          <div style="flex: 1;">
+            <div style="font-size: 16.5px; font-weight: 700;">초기창업패키지</div>
+            <div style="font-size: 13px; color: #6B7280; margin-top: 3px;">창업진흥원 · 최대 1억원 · 3년 이내</div>
+          </div>
+          <div style="text-align: right;"><div style="font-size: 13px; font-weight: 700; color: #5A5BD6;">D-30</div><div style="font-size: 11.5px; color: #9198A6; margin-top: 2px; white-space: nowrap;">접수 중</div></div>
+        </div>
+        <div style="background: #fff; border: 1px solid rgba(47,62,114,0.08); border-radius: 16px; padding: 20px 22px; display: flex; align-items: center; gap: 18px; box-shadow: 0 18px 36px -28px rgba(47,62,114,0.4);">
+          <div style="width: 52px; height: 52px; border-radius: 12px; background: #ECECFB; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; color: #5A5BD6; font-size: 17px; flex-shrink: 0;">81%</div>
+          <div style="flex: 1;">
+            <div style="font-size: 16.5px; font-weight: 700;">예술인 창업 지원사업</div>
+            <div style="font-size: 13px; color: #6B7280; margin-top: 3px;">예술경영지원센터 · 최대 3천만원</div>
+          </div>
+          <div style="text-align: right;"><div style="font-size: 13px; font-weight: 700; color: #5A5BD6;">D-45</div><div style="font-size: 11.5px; color: #9198A6; margin-top: 2px; white-space: nowrap;">접수 중</div></div>
+        </div>
+        <div style="text-align: center; font-size: 13.5px; color: #8B92A0; padding-top: 4px;">+ 내 아이템에 맞는 337개 공고 더 보기</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT PREVIEW ============ -->
+  <section id="preview" style="background: #FBFBFE; border-top: 1px solid rgba(47,62,114,0.07); padding: 104px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px; text-align: center;">
+      <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.06em; color: #5A5BD6;">THE PRODUCT</div>
+      <h2 style="font-size: 44px; line-height: 1.15; font-weight: 800; letter-spacing: -0.03em; margin: 14px 0 0;">AI와 대화하듯, 한 단계씩.</h2>
+      <p style="font-size: 18px; line-height: 1.6; color: #5A6273; margin: 16px auto 0; max-width: 560px;">질문에 답하면 AI가 초안을 쓰고, 당신은 다듬기만 하면 됩니다. 실제 작성 화면을 미리 둘러보세요.</p>
+    </div>
+
+    <div style="max-width: 1080px; margin: 52px auto 0; padding: 0 40px;">
+      <div style="background: #fff; border-radius: 20px; box-shadow: 0 40px 80px -30px rgba(47,62,114,0.4); border: 1px solid rgba(0,0,0,0.06); overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 8px; padding: 14px 18px; background: #F1F1F6; border-bottom: 1px solid rgba(0,0,0,0.05);">
+          <span style="width: 12px; height: 12px; border-radius: 50%; background: #E5675B;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; background: #F4BE4F;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; background: #61C554;"></span>
+          <span style="flex: 1; text-align: center; font-size: 12.5px; color: #8B92A0;">app.stepup.kr / write</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 210px 1fr 250px; min-height: 440px;">
+          <!-- sidebar -->
+          <div style="background: #2F3E72; padding: 22px 16px; color: #C2CAE2;">
+            <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #7E86A8; margin-bottom: 14px;">로드맵 진행률 · 43%</div>
+            <div style="height: 5px; background: rgba(255,255,255,0.12); border-radius: 100px; overflow: hidden; margin-bottom: 18px;"><div style="width: 43%; height: 100%; background: #8E8FF2; border-radius: 100px;"></div></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;margin-bottom:3px;"><span style="width:21px;height:21px;border-radius:50%;background:rgba(142,143,242,0.28);color:#C2CAE2;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">✓</span><span style="font-size:13px;color:#9AA3C0;">문제 발견</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;margin-bottom:3px;"><span style="width:21px;height:21px;border-radius:50%;background:rgba(142,143,242,0.28);color:#C2CAE2;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">✓</span><span style="font-size:13px;color:#9AA3C0;">시장·고객 리서치</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;margin-bottom:3px;background:rgba(142,143,242,0.14);"><span style="width:21px;height:21px;border-radius:50%;background:#8E8FF2;color:#2F3E72;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">3</span><span style="font-size:13px;font-weight:700;color:#EAEDF6;">솔루션 &amp; MVP</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;margin-bottom:3px;"><span style="width:21px;height:21px;border-radius:50%;background:rgba(255,255,255,0.1);color:#6E7699;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">4</span><span style="font-size:13px;color:#6E7699;">비즈니스 모델</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;margin-bottom:3px;"><span style="width:21px;height:21px;border-radius:50%;background:rgba(255,255,255,0.1);color:#6E7699;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">5</span><span style="font-size:13px;color:#6E7699;">실행 로드맵</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;margin-bottom:3px;"><span style="width:21px;height:21px;border-radius:50%;background:rgba(255,255,255,0.1);color:#6E7699;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">6</span><span style="font-size:13px;color:#6E7699;">재무 계획</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;"><span style="width:21px;height:21px;border-radius:50%;background:rgba(255,255,255,0.1);color:#6E7699;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;">7</span><span style="font-size:13px;color:#6E7699;">피치덱 완성</span></div>
+          </div>
+          <!-- chat / writing -->
+          <div style="padding: 26px 28px; display: flex; flex-direction: column; gap: 14px; text-align: left;">
+            <div style="align-self: flex-start; max-width: 88%;">
+              <div style="font-size: 11px; color: #8B92A0; margin-bottom: 5px; font-weight: 600;">Stepup AI</div>
+              <div style="background: #F4F5FA; border: 1px solid #E6E9F0; border-radius: 4px 14px 14px 14px; padding: 13px 16px; font-size: 14px; line-height: 1.6; color: #2C3550;">STEP 2에서 정리한 시장 분석을 봤어요. 이제 <b>핵심 솔루션</b>을 한 문장으로 정의해 볼까요? 어떤 문제를 어떻게 해결하나요?</div>
+            </div>
+            <div style="align-self: flex-end; max-width: 88%;">
+              <div style="background: #5A5BD6; color: #fff; border-radius: 14px 4px 14px 14px; padding: 13px 16px; font-size: 14px; line-height: 1.6;">동네 예술가 작품을 월 구독으로 집에서 체험하고 마음에 들면 구매하는 서비스요.</div>
+            </div>
+            <div style="align-self: flex-start; max-width: 92%;">
+              <div style="font-size: 11px; color: #8B92A0; margin-bottom: 5px; font-weight: 600;">Stepup AI · ✦ 초안 생성</div>
+              <div style="background: #F4F5FA; border: 1px solid #E6E9F0; border-radius: 4px 14px 14px 14px; padding: 14px 16px; font-size: 14px; line-height: 1.7; color: #2C3550;">좋아요. 사업계획서 문장으로 다듬으면:<br><br>“지역 예술가의 작품을 <b>구독형 큐레이션</b>으로 매달 집에서 체험하고, 마음에 들면 구매하는 서비스로 <b>온라인 미술품 구매의 거부감</b>을 해소합니다.”<br><br>이대로 STEP 3에 저장할까요?</div>
+              <div style="display: flex; gap: 8px; margin-top: 10px;">
+                <span style="font-size: 12.5px; font-weight: 600; color: #fff; background: #5A5BD6; padding: 9px 15px; border-radius: 9px;">저장하고 다음 단계 →</span>
+                <span style="font-size: 12.5px; font-weight: 600; color: #2C3550; border: 1px solid #D5D9E2; padding: 9px 15px; border-radius: 9px;">수정 요청</span>
+              </div>
+            </div>
+          </div>
+          <!-- right rail -->
+          <div style="background: #FBFBFE; border-left: 1px solid rgba(47,62,114,0.07); padding: 22px 18px; text-align: left;">
+            <div style="font-size: 11.5px; font-weight: 700; color: #6B7280; letter-spacing: 0.04em; margin-bottom: 14px;">🎯 이 단계 추천 지원사업</div>
+            <div style="background: #fff; border: 1px solid #E6E9F0; border-radius: 12px; padding: 13px 14px; margin-bottom: 10px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;"><span style="font-size:10.5px;font-weight:700;color:#5A5BD6;background:#ECECFB;padding:3px 8px;border-radius:100px;">매칭 94%</span><span style="font-size:10.5px;color:#DC4444;font-weight:700;">D-12</span></div>
+              <div style="font-size:13px;font-weight:700;color:#1F2436;">예비창업패키지 2026</div>
+              <div style="font-size:11.5px;color:#6B7280;margin-top:3px;">중기부 · 최대 1억원</div>
+            </div>
+            <div style="background: #fff; border: 1px solid #E6E9F0; border-radius: 12px; padding: 13px 14px; margin-bottom: 10px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;"><span style="font-size:10.5px;font-weight:700;color:#5A5BD6;background:#ECECFB;padding:3px 8px;border-radius:100px;">매칭 81%</span><span style="font-size:10.5px;color:#5A5BD6;font-weight:700;">D-45</span></div>
+              <div style="font-size:13px;font-weight:700;color:#1F2436;">예술인 창업 지원사업</div>
+              <div style="font-size:11.5px;color:#6B7280;margin-top:3px;">예술경영지원센터 · 3천만원</div>
+            </div>
+            <div style="font-size: 12px; color: #8B92A0; text-align: center; margin-top: 12px;">계획서가 채워질수록<br>추천이 정교해져요</div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 36px;">
+        <a href="step-detail.html" style="display: inline-block; background: #5A5BD6; color: #fff; padding: 17px 34px; border-radius: 100px; font-size: 17px; font-weight: 600; box-shadow: 0 14px 30px -10px rgba(90,91,214,0.55); text-decoration: none;">직접 작성해 보기 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING CTA ============ -->
+  <section id="pricing" style="max-width: 1200px; margin: 0 auto; padding: 104px 40px;">
+    <div style="background: #2F3E72; border-radius: 28px; padding: 72px 40px; text-align: center; position: relative; overflow: hidden;">
+      <div style="position: absolute; top: -100px; right: 10%; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(142,143,242,0.22), transparent 70%); filter: blur(8px);"></div>
+      <div style="position: relative; z-index: 2;">
+        <h2 style="font-size: 46px; line-height: 1.12; font-weight: 800; letter-spacing: -0.03em; color: #EAEDF6; margin: 0; text-wrap: balance;">오늘 아이디어를 적으면,<br>이번 주에 지원사업에 신청할 수 있어요.</h2>
+        <p style="font-size: 18px; color: #AEB6CC; margin: 22px 0 0;">가입 후 7단계 전부 무료. 카드 등록 없이 바로 시작하세요.</p>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 13px; margin-top: 38px;">
+          <a href="step-detail.html" style="background: #8E8FF2; color: #2F3E72; padding: 18px 34px; border-radius: 100px; font-size: 17px; font-weight: 700; text-decoration: none; white-space: nowrap;">무료로 시작하기 →</a>
+          <a href="#how" style="padding: 18px 30px; border-radius: 100px; font-size: 17px; font-weight: 600; border: 1.5px solid rgba(255,255,255,0.25); color: #EAEDF6; text-decoration: none; white-space: nowrap;">작동 방식 보기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="border-top: 1px solid rgba(47,62,114,0.08); padding: 48px 40px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+      <div style="display: flex; align-items: center; gap: 9px;">
+        <span style="width: 28px; height: 28px; border-radius: 8px; background: #5A5BD6; display: inline-flex; align-items: center; justify-content: center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21V11M12 11C12 7 9 4 4 4C4 9 8 11 12 11ZM12 11C12 6.5 15 3 21 3.5C20.5 9 16 11 12 11Z" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 17px;">Stepup</span>
+        <span style="font-size: 13px; color: #9198A6; margin-left: 8px;">아이디어에서 사업계획서까지, AI 창업 로드맵 코치</span>
+      </div>
+      <div style="font-size: 13px; color: #9198A6;">© 2026 Stepup. All rights reserved.</div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
